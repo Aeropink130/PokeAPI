@@ -34,8 +34,8 @@ function mostrarPokemon(data) {
   </ul>
 </div>
     `
-  //agregamos la tarjeta al contenedor de tarjetas sin borrar las que ya estan una al lado de la otra
-  contenedorTarjetas.appendChild(tarjeta);
+  //agregamos la tarjeta al contenedor de tarjetas sin borrar las que ya estan una al lado de la otra,además las nuevas tarjetas se agregan al principio del contenedor.
+  contenedorTarjetas.prepend(tarjeta);
 }
 
 function traerPokemon() {
