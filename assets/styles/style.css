@@ -1,0 +1,57 @@
+body {
+    background: url(../img/fondocentropokemon.png) no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    background-color: rgba(23, 23, 73, 0.5);
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    background-color: rgba(23, 23, 73, 0.5);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.btn {
+    background-color: rgba(23, 23, 73, 0.5);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: rgba(23, 23, 73, 0.8);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.btn-primary:active {
+    background-color: rgba(23, 23, 73, 0.5) !important;
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+}
