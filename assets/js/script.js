@@ -10,19 +10,19 @@ const boton = document.getElementById("boton-pokemon");
 let contenedorTarjetas = document.getElementById("contenedor-tarjetas");
 
 boton.addEventListener("click", (e) => {
-    e.preventDefault();
-    traerPokemon();
+  e.preventDefault();
+  traerPokemon();
 });
 
 function mostrarPokemon(data) {
-    //necesitamos aguardar los tipos de pokemon en un array
-    let tipos = [];
-    data.types.forEach((type) => tipos.push(type.type.name));
+  //necesitamos aguardar los tipos de pokemon en un array
+  let tipos = [];
+  data.types.forEach((type) => tipos.push(type.type.name));
 
-    let tarjeta = document.createElement("div");
-    tarjeta.className = "col-sm-3 col-md-3 col-lg-3 col-xl-3";
-    tarjeta.innerHTML = `
-    <div class="card" style="width: 18rem;">
+  let tarjeta = document.createElement("div");
+  tarjeta.className = "col-sm-12 col-md-6 col-lg-3 col-xl-3";
+  tarjeta.innerHTML = `
+    <div class="card">
   <img src="${data.sprites.front_default}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${data.name}</h5>
@@ -34,17 +34,17 @@ function mostrarPokemon(data) {
   </ul>
 </div>
     `
-    //agregamos la tarjeta al contenedor de tarjetas sin borrar las que ya estan una al lado de la otra
-    contenedorTarjetas.appendChild(tarjeta);
+  //agregamos la tarjeta al contenedor de tarjetas sin borrar las que ya estan una al lado de la otra
+  contenedorTarjetas.appendChild(tarjeta);
 }
 
 function traerPokemon() {
-    let idPokemon = Math.floor(Math.random() * 1010);
-    fetch(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
-        .then((res) => res.json())
-        .then((data) => {
-            mostrarPokemon(data);
-        })
-        .catch((error) => console.log(error));
+  let idPokemon = Math.floor(Math.random() * 1010);
+  fetch(`https://pokeapi.co/api/v2/pokemon/${idPokemon}`)
+    .then((res) => res.json())
+    .then((data) => {
+      mostrarPokemon(data);
+    })
+    .catch((error) => console.log(error));
 }
 
